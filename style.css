@@ -1,0 +1,213 @@
+:root {
+    --bg: #0a0a0a;
+    --surface: #121212;
+    --border: #222;
+    --text-main: #f5f5f5;
+    --text-dim: #888;
+    --accent: #ff8fa3; /* Soft Rose Pink */
+    --accent-glow: rgba(255, 143, 163, 0.2);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; }
+h1 span { color: var(--accent); font-style: italic; }
+
+.pre-title { font-family: 'JetBrains Mono'; color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; }
+
+/* Progress Bar */
+.progress-section { padding: 0 10%; margin: 40px 0; }
+.label-group { display: flex; justify-content: space-between; margin-bottom: 10px; font-family: 'JetBrains Mono'; font-size: 0.8rem; }
+.progress-bar-bg { background: #1a1a1a; height: 6px; border-radius: 10px; overflow: hidden; }
+.progress-bar-fill { 
+    background: var(--accent); 
+    height: 100%; 
+    width: 72%; /* Change this as she progresses! */
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Path Cards with a Romantic Twist */
+.path-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 50px; border-top: 1px solid var(--border); }
+.path-card { 
+    padding: 60px 40px; 
+    border-right: 1px solid var(--border); 
+    text-decoration: none; 
+    color: inherit; 
+    transition: 0.4s ease; 
+}
+
+.path-card:last-child { border-right: none; }
+
+.path-card:hover { background: #161011; } /* Very subtle dark red tint */
+
+.lock-status { 
+    margin-top: 20px; 
+    font-family: 'JetBrains Mono'; 
+    font-size: 0.7rem; 
+    color: var(--accent); 
+    border: 1px solid var(--accent); 
+    display: inline-block; 
+    padding: 4px 10px; 
+    border-radius: 20px; 
+}
+
+/* The Daily Note */
+.daily-note { padding: 80px 10%; text-align: center; }
+.note-box { 
+    border: 1px dashed var(--border); 
+    padding: 40px; 
+    display: inline-block; 
+    max-width: 600px;
+}
+.note-type { font-family: 'JetBrains Mono'; color: var(--text-dim); font-size: 0.8rem; margin-bottom: 20px; }
+.note-content { font-family: 'Playfair Display'; font-size: 1.4rem; font-style: italic; }
+
+.typing-text {
+    display: inline-block;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 2px solid var(--accent); /* The blinking cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; 
+    letter-spacing: 2px;
+    animation: 
+        typing 4.5s steps(30, end),
+        blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width:28% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent); }
+}
+
+/* Logo Styling */
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+
+.logo-highlight {
+    color: var(--accent); /* Your soft rose pink */
+    text-shadow: 0 0 10px var(--accent-glow);
+}
+
+.extension {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+/* Uptime Styling */
+.uptime-container { 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+}
+
+.uptime-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heart-timer {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* The Live Pulse Dot */
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 143, 163, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 143, 163, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 143, 163, 0); }
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: var(--accent);
+    background: rgba(255, 143, 163, 0.05);
+    box-shadow: 0 0 15px rgba(255, 143, 163, 0.1);
+}
+
+.search-icon {
+    color: var(--text-dim);
+    margin-right: 10px;
+}
+
+#navSearch {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    width: 180px;
+    transition: width 0.3s ease;
+}
+
+#navSearch::placeholder {
+    color: var(--text-dim);
+}
+
+#navSearch:focus {
+    width: 240px; /* Expands slightly when typing */
+}
+
+/* The "Shortcut" hint - very pro coder aesthetic */
+.search-shortcut {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    background: #1a1a1a;
+    color: #555;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    margin-left: 10px;
+}
