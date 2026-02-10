@@ -211,3 +211,113 @@ h1 span { color: var(--accent); font-style: italic; }
     border: 1px solid #333;
     margin-left: 10px;
 }
+
+/* Main Navigation Bar */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Pushes Logo to left, Nav-Right to right */
+    align-items: center;
+    padding: 1rem 4%;
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Right Corner Grouping */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Small gap between search and timer */
+}
+
+/* Slimmer Search Box to match the timer height */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 20px; /* Rounded pill shape to match the timer */
+    padding: 5px 15px;
+    transition: border-color 0.3s ease;
+}
+
+.search-container:focus-within {
+    border-color: var(--accent);
+}
+
+#navSearch {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-main);
+    font-size: 0.75rem;
+    width: 120px; /* Compact search box */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Timer Container tweak to align perfectly */
+.uptime-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 143, 163, 0.08);
+    border: 1px solid rgba(255, 143, 163, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    height: 28px; /* Fixed height for perfect alignment */
+    box-sizing: border-box;
+}
+
+.uptime-text {
+    font-size: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    white-space: nowrap;
+}
+
+/* Center Tabs Container */
+.nav-center {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 5px 20px;
+    border-radius: 30px;
+    border: 1px solid var(--border);
+}
+
+.nav-tab {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.nav-tab:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Style for the current page */
+.nav-tab.active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.separator {
+    color: #333; /* Darker grey so it doesn't distract */
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+/* Adjust nav-right gap to give center more room */
+.nav-right {
+    gap: 10px;
+}
+
