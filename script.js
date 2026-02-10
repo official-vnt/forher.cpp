@@ -90,3 +90,10 @@ calculateDailyUptime();
 
 // Update every 30 seconds to keep it precise
 setInterval(calculateDailyUptime, 30000);
+
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'k') {
+        e.preventDefault();
+        document.getElementById('navSearch').focus();
+    }
+});

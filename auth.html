@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorize // Coder Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <div class="auth-header">
+            <span class="auth-icon">🔒</span>
+            <h2>IDENTITY_VERIFICATION</h2>
+            <p>Please enter your credentials to access the heart of the universe.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+            <div class="input-group">
+                <label for="username">USER_ID</label>
+                <input type="text" id="username" placeholder="e.g., favorite_dev" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">ACCESS_KEY</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="auth-btn">INITIALIZE_SESSION</button>
+            <p id="errorMsg" class="error-text"></p>
+        </form>
+
+        <div class="auth-footer">
+            <p>// encryption_mode: active</p>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
