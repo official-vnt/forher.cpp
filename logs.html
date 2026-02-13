@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Feed // Coder Universe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono&family=Playfair+Display:italic,wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="logo">
+            FOR<span class="logo-highlight">HER</span><span class="extension">.cpp</span>
+        </div>
+        <div class="nav-center">
+            <a href="index.html" class="nav-tab">Dashboard</a>
+            <span class="separator">|</span>
+            <a href="updates.html" class="nav-tab">Roadmap</a>
+            <span class="separator">|</span>
+            <a href="practice.html" class="nav-tab">Practice</a>
+            <span class="separator">|</span>
+            <a href="projects.html" class="nav-tab">Projects</a>
+            <span class="separator">|</span>
+            <a href="logs.html" class="nav-tab active">logs</a>
+        </div>
+        <div class="nav-right">
+            <div class="uptime-container">
+                <span class="pulse-dot"></span>
+                <span class="uptime-text">UPTIME: <span class="heart-timer">0</span> MINS OF LOVING YOU TODAY BABY <3</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="command-container">
+        <header class="hero">
+            <p class="pre-title">// SHARED_WORKSPACE: UNIFIED_FEED</p>
+            <h1>Mission <span>Control.</span></h1>
+            <p class="subtitle">A synchronized list of upcoming milestones and pending tasks for the duo.</p>
+        </header>
+
+        <section class="feed-section full-width">
+            <div class="section-header">
+                <div class="feed-tabs">
+                    <button class="feed-tab active" onclick="filterFeed('all')">ALL_LOGS</button>
+                    <button class="feed-tab" onclick="filterFeed('task')">TASKS_ONLY</button>
+                    <button class="feed-tab" onclick="filterFeed('event')">EVENTS_ONLY</button>
+                </div>
+                <button id="openModal" class="add-task-btn">+ ADD_NEW_LOG</button>
+            </div>
+
+            <div class="master-feed" id="masterFeed">
+                </div>
+        </section>
+
+        <div id="logModal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="modal-title">// NEW_SYSTEM_COMMIT</span>
+                    <button onclick="closeModal()" id="closeModalBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-row">
+                        <select id="logType">
+                            <option value="task">TASK</option>
+                            <option value="event">EVENT</option>
+                        </select>
+                        <select id="ownerType">
+                            <option value="her">ASSIGN_TO: HER</option>
+                            <option value="me">ASSIGN_TO: ME</option>
+                        </select>
+                    </div>
+                    <input type="text" id="logTitle" placeholder="Entry Title (e.g., C++ Pointers Lab)">
+                    <textarea id="logDesc" placeholder="Additional details or romantic notes..."></textarea>
+                    <input type="date" id="logDate">
+                    <button id="commitBtn" class="primary-btn">PUSH_TO_FEED</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="system-footer">
+            <div class="footer-divider"></div>
+            <section class="daily-note">
+                <div class="note-box">
+                    <p class="note-type"># git commit -m "love"</p>
+                    <p class="note-content">"Don't let the syntax errors get you down today. You're already compiled perfectly in my heart."</p>
+                </div>
+            </section>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <span class="status-indicator"></span>
+                    <span class="version">VERSION 1.0.8 // CLEAN_SYNC</span>
+                </div>
+                <div class="copyright">&copy; 2026 PROPERTY OF THE BEST DEV.</div>
+                <div class="social-links"><span class="dev-tag">LOGGED WITH INTENT</span></div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="logs.js"></script>
+</body>
+</html>
