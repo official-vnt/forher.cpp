@@ -70,6 +70,47 @@
             transition: all 0.3s ease;
         }
 
+        .back-nav {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-main);
+    text-decoration: none;
+    font-family: 'JetBrains Mono';
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.back-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 143, 163, 0.2);
+    background: linear-gradient(135deg, #1f1f1f 0%, #141414 100%);
+}
+
+.back-link svg {
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover svg {
+    transform: translateX(-3px);
+}
+
+.back-link span {
+    letter-spacing: 1px;
+}
+
         .module-header:hover {
             border-color: var(--accent);
         }
