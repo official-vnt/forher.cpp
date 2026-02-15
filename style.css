@@ -1026,3 +1026,29 @@ h1 span { color: var(--accent); font-style: italic; }
     .command-container { padding: 100px 5% 40px; }
     .modal-content { width: 90%; }
 }
+
+/* --- LOGOUT BUTTON STYLING --- */
+.logout-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(255, 143, 163, 0.05);
+}
+
+.logout-btn svg {
+    width: 18px;
+    height: 18px;
+}

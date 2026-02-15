@@ -12,6 +12,11 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         btn.innerText = "ACCESS_GRANTED";
         btn.style.background = "#4CAF50"; // Green for success
         
+        // Store authentication session
+        localStorage.setItem('forher_authenticated', 'true');
+        localStorage.setItem('forher_user', user);
+        localStorage.setItem('forher_login_time', new Date().getTime());
+        
         setTimeout(() => {
             window.location.href = "index.html";
         }, 1000);
